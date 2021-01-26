@@ -1,0 +1,114 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.main {
+    border: 2px solid black;
+    border-radius: 7px;
+    direction: rtl;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: left;
+    width: 50%;
+    height: 50%;
+    top: 20vh;
+
+}
+
+.login_frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid black;
+    position: relative;
+    height: 100%;
+    width: 35%;
+}
+
+.login_frame div {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    margin: 3px;
+    padding: 10px;
+}
+
+.welcome_frame {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
+    background-color: #368bec;
+    color: whitesmoke;
+    font-family: "B Arshia";
+}
+
+.welcome_content {
+    justify-items: center;
+    position: relative;
+    height: 20%;
+    width: 80%;
+    top: 10vh;
+    right: 15vh;
+    font-size: 40px;
+}
+
+
+input {
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    width: 78%;
+}
+
+.submit_input {
+    background-color: #368bec;
+    width: 80% !important;
+    color: white;
+    font-size: 15px;
+}
+
+.submit_input:hover {
+    background-color: blue;
+}
+
+.sign_up_frame {
+    display: block !important;
+
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+.login_title {
+    font-size: x-large !important;
+}
+
+.sign_up_frame {
+    font-size: small;
+}
+
+.login_title {
+    color: #368bec;
+}
