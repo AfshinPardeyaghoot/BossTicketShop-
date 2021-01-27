@@ -12,4 +12,13 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
 
+  <filter>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/login</url-pattern>
+  </filter-mapping>
+
 </web-app>

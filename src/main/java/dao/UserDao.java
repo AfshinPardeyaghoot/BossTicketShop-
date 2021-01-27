@@ -1,12 +1,14 @@
 package dao;
 
 import entity.User;
+import util.JPAUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.io.PrintWriter;
 
 public class UserDao extends AbstractEntityDao<User, Integer> {
     public UserDao(EntityManager entityManager) {
@@ -18,7 +20,8 @@ public class UserDao extends AbstractEntityDao<User, Integer> {
         return User.class;
     }
 
-    public Boolean isValidUser(EntityManager entityManager, String username, String password) {
+    public static Boolean isValidUser(EntityManager entityManager , String username, String password) {
+
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<User> query = criteriaBuilder.createQuery(User.class);
         Root<User> fromUser = query.from(User.class);
@@ -27,9 +30,23 @@ public class UserDao extends AbstractEntityDao<User, Integer> {
                 username
         ));
         TypedQuery<User> typedQuery = entityManager.createQuery(query);
-        User user = typedQuery.getSingleResult();
-        if (user.getPassword() == password)
-            return true;
+        User user = null ;
+        try {
+            user = typedQuery.getSingleResult();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        entityManager.getTransaction().commit();
+
+        if (user != null){
+            System.out.println(user.getPassword());
+            System.out.println(password);
+            if (user.getPassword().equals(password))
+                return true;
+            else
+                return false ;
+        }
         else return false;
     }
 }

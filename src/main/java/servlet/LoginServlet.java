@@ -14,11 +14,6 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter writer = resp.getWriter();
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-
-        JPAUtil.isValidUser(username, password);
-
 
     }
 }

@@ -21,12 +21,6 @@ public class JPAUtil {
         return getEntityManagerFactory().createEntityManager();
     }
 
-    public static boolean isValidUser(String username, String password) {
-        EntityManager entityManager = getEntityManager();
-        UserDao userDao = new UserDao(entityManager);
-        Boolean b = userDao.isValidUser(entityManager, username, password);
-        return b;
-    }
 
     public static void shutdown() {
         if (factory != null) {
