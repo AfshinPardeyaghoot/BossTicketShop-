@@ -1,0 +1,73 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body{
+
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    direction: rtl;
+    align-items: center;
+
+}
+
+
+.confirm-form{
+    align-items: center;
+    direction: rtl;
+    top: 150px;
+    position: relative;
+    border: black solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    height: 30%;
+    width: 30%;
+
+}
+
+input,label{
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+
+}
+
+.gender{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    height: 30px;
+    width: 90%;
+    color: white;
+    position: relative;
+    background-color: #368bec;
+}
+
+.confirm-title{
+    border-collapse: collapse ;
+    border-radius: 5px;
+    align-items: center;
+    position: relative;
+    direction: rtl;
+    top: 150px;
+    display: flex;
+    border: black solid 3px;
+    border-bottom: none !important;
+    justify-content: center;
+    font-size: xx-large;
+    background-color: #368bec;
+    color: white;
+    font-family: "B Arshia";
+    height: 10%;
+    width: 30%;
+}

@@ -1,5 +1,6 @@
 package dao;
 
+import entity.Book;
 import entity.User;
 import util.JPAUtil;
 
@@ -8,7 +9,15 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class UserDao extends AbstractEntityDao<User, Integer> {
     public UserDao(EntityManager entityManager) {
@@ -48,5 +57,17 @@ public class UserDao extends AbstractEntityDao<User, Integer> {
                 return false ;
         }
         else return false;
+    }
+
+    public static User getUserByUsername(String username,EntityManager entityManager){
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<User> criteriaQuery = criteriaBuilder.createQuery(User.class);
+        Root<User> fromUser = criteriaQuery.from(User.class);
+        criteriaQuery.select(fromUser).where(criteriaBuilder.equal(
+                fromUser.get("username"),
+                username
+        ));
+        TypedQuery<User> query = entityManager.createQuery(criteriaQuery);
+        return query.getSingleResult();
     }
 }

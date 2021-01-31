@@ -20,5 +20,32 @@
     <filter-name>loginFilter</filter-name>
     <url-pattern>/login</url-pattern>
   </filter-mapping>
+  
+  <servlet>
+    <servlet-name>search</servlet-name>
+    <servlet-class>servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>search</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>confirmForm</servlet-name>
+    <servlet-class>servlet.ConfirmFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>confirmForm</servlet-name>
+    <url-pattern>/confirmServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>buyTicket</servlet-name>
+    <servlet-class>servlet.BuyTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>buyTicket</servlet-name>
+    <url-pattern>/buyTicket</url-pattern>
+  </servlet-mapping>
 
 </web-app>

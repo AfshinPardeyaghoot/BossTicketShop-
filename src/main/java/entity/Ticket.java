@@ -1,8 +1,15 @@
 package entity;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
 public class Ticket {
 
     @Id
@@ -16,5 +23,11 @@ public class Ticket {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User userId;
+
+    private String ownerName ;
+
+    private String gender ;
+
+    private boolean isDeleted ;
 
 }

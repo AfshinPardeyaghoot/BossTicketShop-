@@ -5,6 +5,7 @@ import util.JPAUtil;
 
 import javax.persistence.EntityManager;
 import javax.servlet.*;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -36,6 +37,8 @@ public class LoginFilter implements Filter {
                 request.getRequestDispatcher("index.jsp").include(request,response);
             }
         }
+        entityManager.getTransaction().commit();
+        entityManager.close();
     }
 
     @Override
