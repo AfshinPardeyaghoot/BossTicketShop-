@@ -48,4 +48,31 @@
     <url-pattern>/buyTicket</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ShowUserTicket</servlet-name>
+    <servlet-class>servlet.ShowUserTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowUserTicket</servlet-name>
+    <url-pattern>/ShowUserTicket</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>viewTicket</servlet-name>
+    <servlet-class>servlet.ViewTicket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewTicket</servlet-name>
+    <url-pattern>/ViewTicket</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>deleteTicket</servlet-name>
+    <servlet-class>servlet.DeleteTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteTicket</servlet-name>
+    <url-pattern>/DeleteTicket</url-pattern>
+  </servlet-mapping>
+
 </web-app>

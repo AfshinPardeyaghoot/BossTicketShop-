@@ -38,4 +38,5 @@ public class BookDao extends AbstractEntityDao<Book, Integer> {
         return books ;
 
     }
+
 }

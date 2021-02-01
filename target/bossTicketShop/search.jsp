@@ -5,6 +5,7 @@
 <html>
 <head>
     <title>Bus Ticket Booking Service</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style/search.css" type="text/css">
 </head>
 <body>
@@ -31,6 +32,15 @@
             <input type="date" class="date" id="date" name="date">
             <input type="submit" class="search_submit" value="جستجو">
         </form>
+    </div>
+</div>
+<div class="show-ticket" id="show-tk">
+    <div class="show-all-tickets" id="show-all">
+        <div class="show-btn" id="show-btn">
+            <form method="get" action="ShowUserTicket">
+                <input type="submit" value="نمایش بلیط های خریداری شده" class="sub-in" id="sub-in">
+            </form>
+        </div>
     </div>
 </div>
 <% String desCity = (String) request.getAttribute("destination_city");
@@ -62,7 +72,7 @@
                 <td><%=book.getHour()%>:<%=book.getMinute()%></td>
                 <td><%=book.getId()%></td>
                 <form name="form1" action="confirmServlet" method="post">
-                    <td><input type="submit"></td>
+                    <td><input type="submit" class="btn"></td>
                     <input type="hidden" name="btnValue" value="<%=book.getId()%>">
                 </form>
             </tr>

@@ -7,6 +7,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Bus Ticket Booking Service</title>
     <link rel="stylesheet" href="style/index.css" type="text/css">
 </head>

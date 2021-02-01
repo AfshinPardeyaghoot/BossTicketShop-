@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 public class BuyTicketServlet extends HttpServlet {
@@ -39,5 +40,13 @@ public class BuyTicketServlet extends HttpServlet {
         ticketDao.save(ticket);
         entityManager.getTransaction().commit();
         entityManager.close();
+
+        PrintWriter writer = resp.getWriter();
+        if (gender == "male"){
+            writer.println("<script> اقای  "+user.getFirstName()+" "+user.getLastName()+" بلیط شما با موفقیت خریداری شد<script/>");
+        }else if (gender == "female")
+            writer.println("<script> خانم  "+user.getFirstName()+" "+user.getLastName()+" بلیط شما با موفقیت خریداری شد<script/>");
+        req.getRequestDispatcher("search.jsp").forward(req,resp);
+
     }
 }

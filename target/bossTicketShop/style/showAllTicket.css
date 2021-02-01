@@ -1,0 +1,66 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body{
+
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main{
+    border : 3px solid black;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20vh;
+    border-radius: 5px;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid black;
+    width: 33%;
+    background-color: #368bec;
+    color: white;
+    height: 35px;
+}
+
+.th_header{
+    font-size: x-large;
+    height: 45px;
+    background-color: blue !important;
+    color: white;
+
+}
+
+td{
+    border: 1px solid black;
+    width: 33%;
+    height: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.btn{
+    background-color: cornflowerblue;
+    width: 35%;
+    font-size: 12px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+

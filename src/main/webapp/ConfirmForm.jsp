@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Confirm form</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style/confirmOrder.css">
 </head>
 <body>
